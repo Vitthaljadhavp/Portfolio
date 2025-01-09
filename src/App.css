@@ -1,0 +1,177 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/bg_img1.avif'); /* Add your image path */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Make the background fixed */
+}
+
+/* Main App Container */
+.App {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+    color: #333;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+/* Section Styles */
+.section {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px; /* Consistent padding for all sections */
+    margin: 30px 0; /* Equal gap between sections */
+    width: 100%;
+    box-sizing: border-box; /* Include padding and borders in width calculation */
+    transition: all 0.3s ease;
+}
+
+/* Section Headings */
+.section h2 {
+    margin-bottom: 20px; /* Consistent spacing below the heading */
+    text-align: center;
+}
+
+/* Content inside sections */
+.section .content {
+    max-width: 1200px; /* Limit content width */
+    width: 90%; /* Responsive width */
+    text-align: center; /* Center align content */
+}
+
+/* Zigzag Sections */
+.zigzag.left {
+    flex-direction: row-reverse; /* Align content to the right */
+    background: linear-gradient(135deg, #ffffff, #e2e2e2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.zigzag.right {
+    flex-direction: row; /* Align content to the left */
+    background-color: #ffffff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.zigzag.left,
+.zigzag.right {
+    padding: 50px 20px; /* Ensure consistent padding */
+    margin: 30px 0; /* Equal spacing between sections */
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Card Styles */
+.experience-card, .project-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center cards and add spacing */
+    max-width: 600px; /* Consistent card width */
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.experience-card:hover, .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for Icons and Links */
+.experience-card a:hover, .project-card a:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+}
+
+.experience-card a i, .project-card a i {
+    transition: transform 0.2s;
+}
+
+.experience-card a:hover i, .project-card a:hover i {
+    transform: scale(1.2);
+}
+
+/* Hover Effect for Project Titles */
+.project-card h3:hover {
+    color: #1e90ff;
+    cursor: pointer;
+}
+
+/* Contact Button */
+.fab-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e90ff;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    visibility: hidden;
+}
+
+.fab-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 10px; /* Reduce padding for smaller screens */
+        margin: 20px 0; /* Smaller gaps between sections */
+    }
+
+    .experience-card, .project-card {
+        width: 90%; /* Narrower cards for smaller screens */
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 2rem; /* Smaller font size for headings */
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .fab-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px; /* Adjust button size */
+    }
+}

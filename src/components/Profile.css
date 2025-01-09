@@ -1,0 +1,138 @@
+/* Profile Section Styling */
+.profile-section {
+  margin-top: 20px;
+  max-width: 700px;
+  max-height: 500px;
+  background-color: rgb(244, 245, 246); /* Background color of the profile section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+  padding: 20px;
+  border-radius: 20px;
+  height: 50vh; /* Ensure it's within the viewport */
+  animation: jumpEffect 3s ease-in-out 1; /* Jumping animation */
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000%;
+  height: 100%;
+  max-width: 650px;
+  background-color: rgb(232, 243, 242); /* Background color of profile container */
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid black; /* Explicitly remove any inherited border */
+}
+
+.profile-picture {
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  margin-right: 20px; /* Space between image and content */
+  border: none; /* Remove any border here */
+}
+
+.border-wrapper {
+  width: 150px; /* Set the width for the border wrapper */
+  height: 150px; /* Set the height for the border wrapper */
+  border-radius: 100%; /* Rounded border */
+  border: 5px solid black; /* Black border color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: changeBorderColor 7s infinite alternate; /* Animation for border color change */
+}
+
+.profile-img {
+  width: 100%; /* Ensure image fills the entire circle */
+  height: 100%; /* Ensure image fills the entire circle */
+  object-fit: cover; /* Ensure the image fits inside the circle without stretching */
+  border-radius: 50%; /* Circular image */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: justify;
+  font-size: 18px;
+}
+
+.info-item {
+  margin-bottom: 10px;
+}
+
+.info-item a {
+  color: #75b2d2;
+  text-decoration: none;
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Jump Effect on Hover */
+.profile-section:hover {
+  animation: jumpEffect 0.5s ease-in-out; /* Apply the jump animation on hover */
+}
+
+/* Jumping animation */
+@keyframes jumpEffect {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-25px); /* Jump up */
+  }
+  40% {
+    transform: translateY(0); /* Return to original position */
+  }
+  60% {
+    transform: translateY(-15px); /* Jump up again */
+  }
+  80% {
+    transform: translateY(-5); /* Return again */
+  }
+  100% {
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+/* Border Color Change Animation */
+@keyframes changeBorderColor {
+  0% {
+    border-color: #ea9a88; /* Red */
+  }
+  14% {
+    border-color: #7be08e; /* Green */
+  }
+  28% {
+    border-color: #94a3e8; /* Blue */
+  }
+  42% {
+    border-color: #dd77ad; /* Pink */
+  }
+  57% {
+    border-color: #f9f78d; /* Yellow */
+  }
+  71% {
+    border-color: #87e3de; /* Cyan */
+  }
+  85% {
+    border-color: #b37de6; /* Purple */
+  }
+  100% {
+    border-color: #ee8d77; /* Red (return to the starting color) */
+  }
+}

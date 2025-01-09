@@ -1,0 +1,49 @@
+/* Navbar Styling */
+.navbar {
+  background-color: #f1d2d2 !important;
+  position: fixed;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-style: oblique;
+  font-weight: bold;
+  color: rgb(240, 83, 83) !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 1rem;
+  background-color: #dfdebc; /* Set your desired background color */
+  color: rgb(84, 66, 66) !important;
+  border-radius: 5px; /* Add rounded corners if needed */
+  padding: 8px 15px; /* Add padding for better appearance */
+  margin: 0 20px; /* Add space between buttons */
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #000000 !important; /* Highlight effect on hover */
+  background-color: #9ae8d9; /* Change background color on hover */
+  color: white; /* Optional: Maintain text color */
+  transform: scale(1.05); /* Add a slight zoom effect on hover */
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Media Queries for Better Responsiveness */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+}

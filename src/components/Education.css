@@ -1,0 +1,89 @@
+/* General Education Section Styling */
+
+
+
+.education-section {
+  background-color: #6da7a8;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(221, 67, 67, 0.2);
+  padding-top: 0px;
+  padding-bottom: 30px;
+  position: relative; /* Change from fixed to relative */
+  margin-right: 0;
+  width: 45vw; /* 40% of the viewport width */
+  margin-left: auto; /* Align to the right */
+  margin-top: 50px; /* Add a margin to push it down from the top */
+  animation: slideInRight 1s ease-out;
+}
+
+/* Container for buttons */
+.education-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Add gap between buttons */
+  align-items: center;
+}
+
+.education-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.education-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.education-section:hover{
+  box-shadow: 0 6px 12px rgba(212, 53, 53, 0.5);
+}
+
+/* Active Button State */
+.education-btn.active {
+  background-color: #ff6347;
+  transform: scale(1.1);
+}
+
+.education-details {
+  padding: 20px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.education-details h3 {
+  color: #3dbbc4;
+}
+
+/* Animation for Sliding in from the Right */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Styling for the text and icons */
+.education-details p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.education-details .me-2 {
+  margin-right: 8px;
+}
+
+div.section.zigzag.right{
+  background: 0;
+}

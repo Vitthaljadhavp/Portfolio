@@ -1,0 +1,96 @@
+/* About Section Styling */
+.about-section {
+    background: linear-gradient(135deg, #54667a, #5e2d11); /* Soft gradient background */
+    padding: 60px 20px; /* Larger padding for a more spacious section */
+    margin: 50px auto;
+    border-radius: 20px; /* Smooth rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Larger shadow for depth */
+    width: 100%; /* Match the width of the Profile section */
+    max-width: 900px; /* Maximum width for better layout */
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect on hover */
+}
+
+/* Hover zoom effect */
+.about-section:hover {
+    transform: scale(1.03); /* Slight zoom-in effect */
+}
+
+/* Animated Heading */
+.about-section h2 {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    color: #eacc45; /* White color for the heading */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards; /* Fade-in animation */
+}
+
+/* Fade-in animation for heading */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* About text styling */
+.about-text {
+    font-size: 1.2rem; /* Slightly larger text */
+    line-height: 1.8; /* Improved line height for better readability */
+    color: #ece6e6; /* Dark text color for contrast */
+    max-width: 700px; /* Limit text width */
+    margin: 0 auto 20px; /* Center-align with spacing */
+    opacity: 0;
+    animation: fadeInText 2.5s ease-in-out forwards; /* Fade-in text animation */
+    text-align: justify; /* Justify the text */
+}
+
+/* Fade-in effect for paragraph text */
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide-in effect from left for the text */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Apply slide-in animation for .about-text */
+.about-text {
+    animation: slideIn 1.5s ease-in-out forwards;
+    
+}
+
+/* Smooth border effect */
+.about-section:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.1); /* Transparent background */
+    border-radius: 20px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on section for subtle transformation */
+.about-section:hover:before {
+    transform: scale(1.05);
+}
+
+/* Enhanced text styling */
+.about-text strong {
+    font-size: 1.25rem; /* Slightly larger for emphasis */
+    color: #e6ec40; /* Orange color for strong text */
+}
+
+.about-para{
+    border: 3px dotted black;
+    
+}

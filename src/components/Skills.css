@@ -1,0 +1,139 @@
+/* General Section Styling */
+.skills-section {
+  background-color: rgb(232 243 242);
+  max-width: 900px;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #353c12;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Grid Layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 30px; /* Space between the cards */
+}
+
+.skill-card {
+  background: #fff;
+  border: 3px dotted black;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex: 0 1 calc(45% - 20px); /* Two cards per row with space */
+  max-width: calc(45% - 20px);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.skill-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Card Styling */
+.active-card {
+  background-color: #e3fcef; /* Smooth background color for active card */
+  transform: scale(1.03);
+}
+
+/* Skill Category Title */
+.skill-category-title {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #4caf50;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #4caf50;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Skills List Styling */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Display skills in two columns */
+  gap: 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.skills-list li {
+  margin: 5px 0;
+  position: relative;
+  padding-left: 30px;
+  text-align: justify;
+}
+
+.skills-list li::before {
+  content: "✔";
+  color: #4caf50;
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+/* Animation Effects */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .skill-card {
+    flex: 0 1 100%; /* Single card per row on smaller devices */
+    max-width: 100%;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr; /* Single column on smaller devices */
+  }
+}

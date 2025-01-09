@@ -1,0 +1,76 @@
+/* .projects-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .projects-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #e83737;
+  }
+  
+  .project-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    display: inline-block;
+    min-width: 300px;
+    max-width: 400px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+  
+  .project-card p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .project-card a:hover {
+    text-decoration: underline;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  
+  .navigation {
+    margin-top: 1.5rem;
+  }
+  
+  .navigation button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navigation button:hover {
+    background-color: #0056b3;
+  }
+   */
