@@ -1,7 +1,7 @@
 /* Navbar Styling */
 .navbar {
   background-color: #f1d2d2 !important;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .navbar-brand {
